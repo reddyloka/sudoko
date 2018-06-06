@@ -100,7 +100,7 @@ function gridUpdate(row, col) {
 	if (isvalid(row, col, value)) {
 		grid[row][col] = value;
 	} else {
-		window.alert('wroung input');
+		window.alert('wroung input try another');
 		document.getElementById(`digit${row}${col}`).value = '';
 		return;
 	}
