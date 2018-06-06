@@ -3,8 +3,16 @@
 	<link rel="stylesheet" href="..\sudoko\file.css" />
 </head>
 <body onload="myFunction()">
-	<button type='submit' onclick="play()">play</button>
+	<!-- <button type='submit' onclick="play()">play</button> -->
+	<label>select level of difficulty</label>
+	<select onchange="play(value)">
+		<option value=''>select level</option>
+		<option value='2'>Easy</option>
+		<option value='4'>Medium</option>
+		<option value='6'>Hard</option>
+	</select>
 	<button type='submit' onclick="result()">check</button>
+
 
 	<script src="..\sudoko\logic.js"></script>
 </body>

@@ -81,9 +81,9 @@ function assign() {
 function refresh(){
 	location.reload();
 }
-function play() {
+function play(value) {
 	for (let i = 0; i < 9; i++) {
-		for (let j = 0; j < 3; j++){
+		for (let j = 0; j < value; j++){
 		let emptyValues = randomValue();
 		if (grid[i][emptyValues]) {
 			grid[i][emptyValues] = '';
