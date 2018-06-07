@@ -44,8 +44,9 @@ function myFunction() {
 		}else{
 			sudokusolver(0, c + 1);}
 		}
-         if(grid[r].length>0){
-			var arr=[6,2,1,5,8,9,3,7,4];
+      if(grid[r].length>0){
+			 var arr=[];
+			 arr=shuffleArray();
 			for (let num = 0; num <9 ; num++) {
 				let currentValue = arr[num];
 				if (isvalid(r, c, currentValue) && grid[r][c] == 0) {
@@ -54,8 +55,6 @@ function myFunction() {
 					grid[r][c] = 0;
 				}
 			}
-			let a=arr.pop();
-			arr.unshift(a);
 		}else{
 			sudokusolver(r+1,c)
 		}
@@ -135,6 +134,16 @@ function gridUpdate(row, col) {
 		document.getElementById(`digit${row}${col}`).value = '';
 	}
 	return;
+}
+function shuffleArray(){
+	var arr=[6,2,1,5,8,9,3,7,4];
+	for(let i=0;i<9;i++){
+		let temp=arr[i];
+		let randomIndex=randomValue()%9;
+		arr[i]=arr[randomIndex];
+		arr[randomIndex]=temp;
+	}
+	return arr;
 }
 function result() {
 	var count = 0;
