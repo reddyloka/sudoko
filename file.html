@@ -4,15 +4,15 @@
 </head>
 <body onload="myFunction()">
 	<label>select level of difficulty</label>
-	<select onchange="play(value)">
-		<option value=''>select level</option>
-		<option value='2'>Easy</option>
-		<option value='4'>Medium</option>
-		<option value='6'>Hard</option>
+	<select id='level' onchange="play(value)">
+		<option  value=''>select level</option>
+		<option id='level1' value='2'>Easy</option>
+		<option id='level2' value='4' >Medium</option>
+		<option id='level3' value='6'>Hard</option>
 	</select>
 	<button type='submit' onclick="result()">check</button>
 
-
 	<script src="..\sudoko\logic.js"></script>
+
 </body>
 </html>

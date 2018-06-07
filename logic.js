@@ -15,7 +15,7 @@ function myFunction() {
 			if(col==3||col==7){
 				document.getElementById(`myTr${row}`).appendChild(z);
 			}else{
-				var inputTag = `<input type='number' id='digit${row}${col}' onKeyUp='gridUpdate(${row},${col})' />`;
+				var inputTag = `<input type='string' id='digit${row}${col}' onKeyUp='gridUpdate(${row},${col})' />`;
 				z.innerHTML = inputTag;
 				document.getElementById(`myTr${row}`).appendChild(z);
 			}
@@ -110,6 +110,37 @@ function refresh(){
 	return;
 }
 function play(value) {
+	var dropdown = document.getElementById("level");
+	var index = dropdown.selectedIndex;
+	var Val = dropdown.options[index].value;
+	if((Val == 2))
+	{
+	   outputSB=`<select id='level'>                  
+	   <option  value=''>select level</option>
+	   <option id='level1' value='2'>Easy</option>
+	   <option id='level2' value='4' disabled>Medium</option>
+	   <option id='level3' value='6' disabled>Hard</option>
+				 </select>`; 
+	}
+	else if((Val == 4))
+	{
+	   outputSB=`<select id='level'>                  
+	   <option  value=''>select level</option>
+	   <option id='level1' value='2' disabled>Easy</option>
+	   <option id='level2' value='4' >Medium</option>
+	   <option id='level3' value='6' disabled>Hard</option>
+				 </select>`; 
+	}else if((Val == 6))
+	{
+	   outputSB=`<select id='level'>                  
+	<option  value=''>select level</option>
+	   <option id='level1' value='2'disabled>Easy</option>
+	   <option id='level2' value='4' disabled>Medium</option>
+	   <option id='level3' value='6' >Hard</option>
+				 </select>`; 
+	}
+	document.getElementById("level").innerHTML = outputSB;
+
 	for (let i = 0; i < 11; i++) {
 		for (let j = 0; j < value; j++){
 			if(i==3||i==7){
