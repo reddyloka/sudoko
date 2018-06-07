@@ -117,9 +117,9 @@ function play(value) {
 	{
 	   outputSB=`<select id='level'>                  
 	   <option  value=''>select level</option>
-	   <option id='level1' value='2'>Easy</option>
-	   <option id='level2' value='4' disabled>Medium</option>
-	   <option id='level3' value='6' disabled>Hard</option>
+	   <option id='level1' value='2' disabled selected>Easy</option>
+	   <option id='level2' value='4' >Medium</option>
+	   <option id='level3' value='6' >Hard</option>
 				 </select>`; 
 	}
 	else if((Val == 4))
@@ -127,8 +127,8 @@ function play(value) {
 	   outputSB=`<select id='level'>                  
 	   <option  value=''>select level</option>
 	   <option id='level1' value='2' disabled>Easy</option>
-	   <option id='level2' value='4' >Medium</option>
-	   <option id='level3' value='6' disabled>Hard</option>
+	   <option id='level2' value='4' disabled selected>Medium</option>
+	   <option id='level3' value='6' >Hard</option>
 				 </select>`; 
 	}else if((Val == 6))
 	{
@@ -136,7 +136,7 @@ function play(value) {
 	<option  value=''>select level</option>
 	   <option id='level1' value='2'disabled>Easy</option>
 	   <option id='level2' value='4' disabled>Medium</option>
-	   <option id='level3' value='6' >Hard</option>
+	   <option id='level3' value='6' disabled selected>Hard</option>
 				 </select>`; 
 	}
 	document.getElementById("level").innerHTML = outputSB;
